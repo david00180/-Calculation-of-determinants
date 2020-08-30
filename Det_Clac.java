@@ -6,12 +6,16 @@ public class Det_Clac {
 				{ 1, 2, 3, 4, -4, 4, 10 }, { 2, 3, 4, 3, 3, 3, 9 }, { 2, 3, -12, 1, 2, 30, 3 },
 				{ 7, 5, 9, 10, 2, 4, 3 } };
 
-		System.out.println(detCalc(a));
+		double[][] a2 = {{1,2},{2,3}};
+		
+		System.out.println(detCalc(a2));
 
 	}
 
 	public static double detCalc(double[][] a) {
-
+		if(a.length == 2) {
+			return det2x2(a);
+		}
 		double[][] tempA = new double[a.length - 1][a.length - 1];
 
 		double temp1 = 0, temp2 = 1;
